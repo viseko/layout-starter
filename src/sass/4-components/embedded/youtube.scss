@@ -7,7 +7,6 @@ $c-btn-size: 80px;
 $c-btn-size-sm: 60px;
 $c-icon-size: 24px;
 $c-icon-size-sm: 16px;
-
 $c-btn-width: $c-btn-size;
 $c-btn-height: $c-btn-size;
 $c-btn-width-sm: $c-btn-size-sm;
@@ -15,24 +14,24 @@ $c-btn-height-sm: $c-btn-size-sm;
 
 .youtube {
   position: relative;
-  display: flex !important;
+  display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   margin: 0 auto;
   background-color: $c-background;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
   aspect-ratio: $c-aspect-ratio;
 
   &__play {
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
     width: 100%;
     height: 100%;
-    display: flex;
     border: 0;
 
     ._play & {
@@ -45,7 +44,7 @@ $c-btn-height-sm: $c-btn-size-sm;
   }
 
   &__play:active &__icon {
-    opacity: 0.7;
+    opacity: 70%;
   }
 
   &__icon {
@@ -53,13 +52,12 @@ $c-btn-height-sm: $c-btn-size-sm;
     width: $c-btn-width;
     height: $c-btn-height;
     margin: auto;
-    color: $c-icon-color;
     border: 0;
     border-radius: $c-btn-border-radius;
-    transition:
-      background-color 0.3s $bezier,
-      color 0.3s $bezier;
     background-color: $c-btn-bg;
+    color: $c-icon-color;
+    transition: background-color 0.3s $bezier,
+      color 0.3s $bezier;
 
     @media (max-width: $sm) {
       width: $c-btn-width-sm;

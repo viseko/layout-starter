@@ -1,29 +1,29 @@
 // Кнопка мобильного меню
 .btn-menu {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 24px;
-	height: 24px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
 
-	&__icon {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		transition: $bezier transform 0.3s, $bezier opacity 0.3s;
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: $bezier transform 0.3s, $bezier opacity 0.3s;
+    transform: translate(-50%, -50%);
 
-		body._menu-open & {
-			transform: translate(-50%, -50%) scale(0);
-		}
+    body._menu-open & {
+      transform: translate(-50%, -50%) scale(0);
+    }
 
-		&--close {
-			transform: translate(-50%, -50%) scale(0);
+    &--close {
+      transform: translate(-50%, -50%) scale(0);
 
-			body._menu-open & {				
-				transform: translate(-50%, -50%) scale(1);
-			}
-		}
-	}
+      body._menu-open & {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
 }

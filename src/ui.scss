@@ -10,18 +10,18 @@ section {
 
 .ui-header {
   position: fixed;
-  top: 0;
-  left: 0;
   z-index: 9999;
+  left: 0;
+  top: 0;
   width: 100%;
   background-color: $cl-primary;
 }
 
 .ui-nav {
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem 2rem;
-  margin: 0;
   padding: 2rem 0;
   list-style: none;
 
@@ -40,8 +40,8 @@ section {
   }
 
   a._active {
-    opacity: 50%;
     pointer-events: none;
+    opacity: 0.5;
   }
 }
 
@@ -51,7 +51,7 @@ section {
   section {
     &:not(._active) {
       overflow: hidden;
-      height: 0;
+      height: 0px;
       padding: 0;
       visibility: hidden;
     }
@@ -60,19 +60,19 @@ section {
 
 .ui-block {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  color: $cl-white;
+  background-color: $cl-primary;
   min-height: 8rem;
   border-radius: 10px;
-  background-color: $cl-primary;
-  color: $cl-white;
 }
 
 .ui-title {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 100%;
   height: calc(80vh - var(--header-height));
 

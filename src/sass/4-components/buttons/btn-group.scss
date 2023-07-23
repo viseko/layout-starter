@@ -1,23 +1,23 @@
 // Группы кнопок
 .btn-group {
-	display: flex;
+  display: flex;
 
-	[type='radio'] {
-		display: none;
-	}
+  [type = "radio"] {
+    display: none;
+  }
 
-	.btn-nav:first-child,
-	[type='radio']:first-child + .btn-nav {
-		border-top-left-radius: 8px;
-		border-bottom-left-radius: 8px;
-	}
+  .btn-nav:first-child,
+  [type = "radio"]:first-child + .btn-nav {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
 
-	.btn-nav:last-child {
-		border-top-right-radius: 8px;
-		border-bottom-right-radius: 8px;
-	}
+  .btn-nav:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
 
-	.btn-nav:not(:last-child):not(:hover) {
-		border-right-color: transparent;
-	}
+  .btn-nav:not(:last-child, :hover) {
+    border-right-color: transparent;
+  }
 }

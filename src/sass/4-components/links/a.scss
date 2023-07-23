@@ -1,14 +1,14 @@
 a {
-	color: $link-color;
-	font-size: inherit;
-	text-decoration: none;
-	transition: color $tr-btn, border-color $tr-btn;
+  color: $link-color;
+  font-size: inherit;
+  text-decoration: none;
+  transition: color $tr-btn, border-color $tr-btn;
 
-	@include hover {
-		color: lighten($link-color, 10%);
-	}
+  @include hover {
+    color: lighten($link-color, 10%);
+  }
 
-	&:active {
-		opacity: $click-opacity;
-	}
+  &:active {
+    opacity: $click-opacity;
+  }
 }

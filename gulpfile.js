@@ -1,11 +1,12 @@
 import gulp from "gulp";
 import pugLinter from "gulp-pug-linter";
+import stylelint from "gulp-stylelint";
 
 import { path } from "./gulp/config/path.js";
 import { plugins } from "./gulp/config/plugins.js";
 
 function isBuild() {
-	return process.argv.includes('--build') || process.argv.includes('build');
+	return process.argv.includes("--build") || process.argv.includes("build");
 }
 
 // Передаем значения в глобальную переменную
@@ -65,11 +66,26 @@ export { build }
 export { deployZIP }
 export { deploy }
 
-gulp.task('default', dev);
+gulp.task("default", dev);
 
 // Линтинг
-gulp.task('lint:template', () => (
+gulp.task("lint:template", () => (
   gulp
     .src(app.path.watch.pug)
-    .pipe(pugLinter({ reporter: 'default' }))
+    .pipe(pugLinter({ reporter: "default" }))
 ));
+
+gulp.task("lint:scss", () => {
+	return gulp.src(app.path.watch.sass).
+    pipe(stylelint({
+			fix: true,
+      reporters: [
+        {
+          failAfterError: true,
+          formatter: 'string',
+          console: true,
+        },
+      ],
+    })).
+		pipe(gulp.dest(`src/sass`));
+});

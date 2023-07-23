@@ -1,11 +1,11 @@
 .card-slider {
   @media (max-width: $lg) {
-    margin-left: -$container-padding-sm;
     margin-right: -$container-padding-sm;
+    margin-left: -$container-padding-sm;
 
     .swiper {
-      padding-left: $container-padding-sm;
       padding-right: $container-padding-sm;
+      padding-left: $container-padding-sm;
     }
   }
 

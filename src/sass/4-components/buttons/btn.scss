@@ -17,69 +17,68 @@ $b-border-radius: 8px;
 $b-transition-duration: 0.3s;
 
 @mixin b-disabled {
-	opacity: 50%;
+  opacity: 50%;
 }
 
 button,
 .btn {
-	display: inline-flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: $b-gap;
-	padding: $b-padding;
-	color: $b-color;
-	font-weight: $b-font-weight;
-	font-size: $b-font-size;
-	line-height: $b-line-height;
-	white-space: nowrap;
-	background-color: $b-background-color;
-	border: $b-border;
-	border-radius: $b-border-radius;
-	transition:
-    $bezier background-color $b-transition-duration,
+  display: inline-flex;
+  gap: $b-gap;
+  justify-content: space-between;
+  align-items: center;
+  padding: $b-padding;
+  border: $b-border;
+  border-radius: $b-border-radius;
+  background-color: $b-background-color;
+  color: $b-color;
+  font-weight: $b-font-weight;
+  font-size: $b-font-size;
+  line-height: $b-line-height;
+  white-space: nowrap;
+  user-select: none;
+  transition: $bezier background-color $b-transition-duration,
     $bezier color $b-transition-duration,
     $bezier border-color $b-transition-duration;
-	user-select: none;
 
-	@media (max-width: $sm) {
-		padding: $b-padding-sm;
-		font-size: $b-font-size-sm;
-	}
+  @media (max-width: $sm) {
+    padding: $b-padding-sm;
+    font-size: $b-font-size-sm;
+  }
 
-	&:not(:disabled) {
-		cursor: pointer;
-	}
+  &:not(:disabled) {
+    cursor: pointer;
+  }
 
-	@include hover {
+  @include hover {
     &:not(:disabled) {
-      color: $cl-white;
+      border: $b-border-hover;
       background-color: $b-background-color-hover;
-			border: $b-border-hover;
+      color: $cl-white;
     }
   }
 
-	&:active:not(:disabled) {
-		opacity: $click-opacity;
-	}
+  &:active:not(:disabled) {
+    opacity: $click-opacity;
+  }
 
-	&:disabled {
-		@include b-disabled;
-	}
+  &:disabled {
+    @include b-disabled;
+  }
 }
 
 .btn-lg {
-	padding: $b-padding-lg;
-	font-size: $b-font-size-lg;
-	line-height: $b-line-height-lg;
+  padding: $b-padding-lg;
+  font-size: $b-font-size-lg;
+  line-height: $b-line-height-lg;
 
-	@media (max-width: $sm) {
-		padding: $b-padding;
-		font-size: $b-font-size;
-		line-height: $b-line-height;
-	}
+  @media (max-width: $sm) {
+    padding: $b-padding;
+    font-size: $b-font-size;
+    line-height: $b-line-height;
+  }
 }
 
 .btn-sm {
-	padding: $b-padding-sm;
-	font-size: $b-font-size-sm;
+  padding: $b-padding-sm;
+  font-size: $b-font-size-sm;
 }

@@ -1,14 +1,14 @@
 table:not(.reset-table) {
-  width: 100%;
-  border-collapse: collapse;
   overflow: auto;
+  width: 100%;
+  margin-bottom: 5rem;
+  border-collapse: collapse;
+  border-top: 1px solid $cl-border;
   font-size: 16px;
   line-height: 3rem;
-  margin-bottom: 5rem;
-  border-top: 1px solid $cl-border;
 
   tr {
-    border-bottom: 1px solid $cl-border;;
+    border-bottom: 1px solid $cl-border;
   }
   
   td,
@@ -18,8 +18,8 @@ table:not(.reset-table) {
   }
 
   th {
+    background-color: $cl-primary;
     color: $cl-white;
     font-weight: 700;
-    background-color: $cl-primary;
   }
 }

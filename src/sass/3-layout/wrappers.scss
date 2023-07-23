@@ -1,12 +1,12 @@
 .scroll-wrapper {
-  max-width: 100%;
   overflow-x: auto;
+  max-width: 100%;
 
   @media (max-width: $sm) {
     max-width: calc(100% + $container-padding-sm * 2);
-    padding-left: $container-padding-sm;
-    padding-right: $container-padding-sm;
-    margin-left: - $container-padding-sm;
     margin-right: - $container-padding-sm;
+    margin-left: - $container-padding-sm;
+    padding-right: $container-padding-sm;
+    padding-left: $container-padding-sm;
   }
 }

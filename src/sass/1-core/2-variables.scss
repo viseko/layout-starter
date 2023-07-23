@@ -1,14 +1,14 @@
 // Цветовая палитра
 $cl-white: #ffffff;
 $cl-black: #000000;
-$cl-blue: #1168C8;
+$cl-blue: #1168c8;
 
 // Семантическая палитра
-$cl-primary: #B6C9DE;
-$cl-error: #CD2318;
-$cl-success: #58B000;
-$cl-alert: #EDAA18;
-$cl-info: #4B6C92;
+$cl-primary: #b6c9de;
+$cl-error: #cd2318;
+$cl-success: #58b000;
+$cl-alert: #edaa18;
+$cl-info: #4b6c92;
 
 // Базовые цвета
 $background: $cl-white; // фон страницы
@@ -34,7 +34,7 @@ $section-offset: 96px; // межсекционные отступы
 $section-offset-sm: 40px; // межсекционные отступы (mobile)
 
 // Текст
-$font_family: "Roboto", Helvetica, Arial, sans-serif; // Шрифт по умолчанию
+$font-family: "Roboto", helvetica, arial, sans-serif; // Шрифт по умолчанию
 $font-size: 20px; // кегль на десктопе
 $font-size-sm: 16px; // кегль на мобилках
 $line-height-sm: 3rem; // интерлиньяж на мобилках

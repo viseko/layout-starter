@@ -19,12 +19,12 @@
   &__input {
     width: 100%;
     padding: 11px 55px 11px 39px;
-    font-size: 2rem;
-    line-height: 3rem;
-    background-color: $cl-primary-light;
     border: 1px solid transparent;
     border-radius: 100px;
+    background-color: $cl-primary-light;
     outline: 0;
+    font-size: 2rem;
+    line-height: 3rem;
     transition: $bezier 0.3s background-color, $bezier 0.3s border-color;
 
     @media (max-width: $sm) {
@@ -49,10 +49,10 @@
   &__reset {
     position: absolute;
     top: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 3rem;
     height: 3rem;
     padding: 0;
@@ -66,8 +66,8 @@
     }
 
     &:hover:not(:disabled) {
-      color: $cl-blue-dark;
       background: none;
+      color: $cl-blue-dark;
     }
   }
 
@@ -78,8 +78,8 @@
 
   &--sm &__input {
     padding: 7px 15px 7px 39px;
-    font-size: 14px;
     border-radius: 8px;
+    font-size: 14px;
   }
 
   &--sm &__icon {

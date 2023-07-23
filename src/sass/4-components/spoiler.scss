@@ -6,14 +6,14 @@
   &__btn {
     display: inline-block;
     padding: 0;
+    background-color: transparent;
     color: $cl-blue;
     font-size: 14px;
     line-height: 24px;
-    background-color: transparent;
 
     &:hover:not(:disabled) {
-      color: lighten($cl-blue, 10%);
       background-color: transparent;
+      color: lighten($cl-blue, 10%);
     }
 
     &--hide {
@@ -33,4 +33,3 @@
     display: none;
   }
 }
-

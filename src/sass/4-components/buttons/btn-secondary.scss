@@ -1,16 +1,16 @@
 .btn-secondary {
-	color: $cl-gray-dark;
-	background-color: $cl-primary-light;
+  background-color: $cl-primary-light;
+  color: $cl-gray-dark;
 
-	@include hover {
-		:not(:disabled) {
-			color: $cl-gray-dark;
-			background-color: #E6EAEB;
-		}
-	}
+  @include hover {
+    :not(:disabled) {
+      background-color: #e6eaeb;
+      color: $cl-gray-dark;
+    }
+  }
 
-	&:disabled {
-		color: rgba($cl-gray-dark, 50%);
-		background-color: #E6EAEB;
-	}
+  &:disabled {
+    background-color: #e6eaeb;
+    color: rgba($cl-gray-dark, 50%);
+  }
 }

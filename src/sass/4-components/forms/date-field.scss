@@ -1,9 +1,9 @@
 .date-field {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 4px;
+  justify-content: center;
+  align-items: center;
   padding: 10px 15px 12px;
   border: 1px solid $cl-stroke;
   border-radius: 8px;
@@ -16,8 +16,8 @@
 
   &__icon {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 16px;
     height: 16px;
     color: $cl-gray-middle;
@@ -25,25 +25,25 @@
 
   &__input {
     position: absolute;
-    z-index: 1;
     top: 0;
     left: 0;
+    z-index: 1;
     width: 100%;
     height: 100%;
-    opacity: 0;
+    opacity: 0%;
     cursor: pointer;
   }
 
   &__output {
+    vertical-align: middle;
     font-size: 14px;
     line-height: 16px;
-    vertical-align: middle;
   }
 
   &--single {
-    height: 56px;
     flex-direction: row-reverse;
     justify-content: space-between;
+    height: 56px;
   }
 
   &--single &__output {

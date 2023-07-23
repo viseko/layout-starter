@@ -1,18 +1,18 @@
 .checkbox {
-  display: inline-block;
   position: relative;
+  display: inline-block;
+  overflow: hidden;
   width: 16px;
   height: 16px;
-  overflow: hidden;
 
-  [type="checkbox"] {
+  [type = "checkbox"] {
     display: none;
   }
 
   &__outer {
     position: absolute;
-    left: 0;
     right: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     border-radius: 4px;
