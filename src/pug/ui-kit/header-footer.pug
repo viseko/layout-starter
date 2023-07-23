@@ -1,0 +1,19 @@
+section#header-footer
+  .section-accent
+    - var line = false
+    include ../header
+
+    .mb-80
+
+    - var line = true
+    include ../header
+
+    .mb-80
+    - var line = false
+    - var auth = true
+
+    include ../header
+
+    .mb-80
+
+    include ../footer

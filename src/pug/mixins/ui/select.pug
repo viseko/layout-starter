@@ -1,0 +1,19 @@
+mixin select(data)
+  -var list = data.list
+  -var name = data.name
+  -var className = data.className
+
+  .select.js-select(class=className)
+    select.select__input(name=name data-role="select") 
+      option(value=list[0] selected)=list[0]
+      each val of list.slice(1)
+        option(value=val)=val
+    button.select__btn(data-role="btn")
+      span.select__value(data-role="value")=list[0]
+      .select__icon 
+        +icon("chevron-bottom", 16, 16)
+    .select__list.dropdown(data-role="list" data-simplebar)
+      button.dropdown__item(data-value=list[0] disabled)=list[0]
+      each val of list.slice(1)
+        button.dropdown__item(data-value=val)=val
+      

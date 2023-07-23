@@ -1,0 +1,24 @@
+mixin date-field(data)
+  .date-field.js-date-field
+    .date-field__icon
+      +icon("calendar", 16, 16)
+    input.date-field__input(
+      type="text",
+      data-role="input",
+      autocomplete="off",
+      name=data.name,
+      required=data.required
+    )
+    .date-field__output(data-role="output")
+
+mixin date-field-single(data)
+  .date-field.date-field--single.js-date-field-single
+    input.date-field__input(
+      type="date"
+      data-role="input"
+      autpcomplete="off"
+      name=data.name
+    )
+    .date-field__icon
+      +icon("calendar", 20, 20)
+    .date-field__output(data-role="output")

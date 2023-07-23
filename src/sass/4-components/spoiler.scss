@@ -1,0 +1,36 @@
+.spoiler {
+  &__full {
+    display: none;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 0;
+    color: $cl-blue;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: transparent;
+
+    &:hover:not(:disabled) {
+      color: lighten($cl-blue, 10%);
+      background-color: transparent;
+    }
+
+    &--hide {
+      display: none;
+    }
+  }
+
+  &._show &__btn--hide {
+    display: inline-block;
+  }
+
+  &._show &__full {
+    display: block;
+  }
+
+  &._show &__short {
+    display: none;
+  }
+}
+

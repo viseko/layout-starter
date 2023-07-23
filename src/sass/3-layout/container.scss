@@ -1,0 +1,12 @@
+.container {
+  margin: 0 auto;
+	width: 100%;
+  max-width: calc($container-width + $container-padding * 2);
+	padding-left: $container-padding;
+	padding-right: $container-padding;
+
+	@media (max-width: $xl) {
+		padding-left: $container-padding-sm;
+		padding-right: $container-padding-sm;
+	}
+}

@@ -1,0 +1,17 @@
+section#media-blocks
+  .container
+    h2 Контентные блоки
+  
+  .container.container--md.container--media
+    +figure("article-1", "Картинка с подписью")
+  .container.container--sm
+    p Параграф для кучи. Следует отметить, что социально-экономическое развитие напрямую зависит от экономической целесообразности принимаемых изменений.
+  .container.container--sm
+    p Параграф для кучи. Следует отметить, что социально-экономическое развитие напрямую зависит от экономической целесообразности принимаемых изменений.
+  .container.container--md.container--media
+    figure
+      .video-box.js-video-box(data-youtube-id="dQw4w9WgXcQ")
+        a.video-box__play(href="https://youtu.be/dQw4w9WgXcQ" target="_blank", rel="noopener noreferrer")
+          span.visually-hidden Воспроизвести видео
+          .video-box__icon
+            +icon("play", 16, 16)

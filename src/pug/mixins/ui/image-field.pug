@@ -1,0 +1,6 @@
+mixin image-field(data)
+  .image-field.js-image-field
+    input.image-field__input(type="file", name=data.name)
+    .image-field__preview(data-role="preview")
+    .image-field__btn
+      +icon("edit", 16, 16)

@@ -1,0 +1,32 @@
+figure {
+  margin: 0;
+  padding: 0;
+
+	@media (max-width: $sm) {
+		width: calc(100% + $container-padding-sm * 2);
+		margin: 0 calc($container-padding-sm * -1);
+	}
+}
+
+figcaption {
+	max-width: 880px;
+	margin-top: 3rem;
+	color: $cl-gray-middle;
+	font-size: 2rem;
+	line-height: 3rem;
+
+	@media (max-width: $sm) {
+		margin-top: 2rem;
+		font-size: 14px;
+		padding-left: $container-padding-sm;
+		padding-right: $container-padding-sm;
+	}
+}
+
+img {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}

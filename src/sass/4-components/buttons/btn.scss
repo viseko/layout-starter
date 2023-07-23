@@ -1,0 +1,85 @@
+$b-padding: 11px 3rem 13px;
+$b-padding-lg: 11px 5rem 13px;
+$b-padding-sm: 7px 2rem 9px;
+$b-gap: 1rem;
+$b-font-weight: 600;
+$b-color: $cl-white;
+$b-font-size: 2rem;
+$b-font-size-lg: 18px;
+$b-font-size-sm: 14px;
+$b-line-height: 3rem;
+$b-line-height-lg: 4rem;
+$b-background-color: $cl-primary;
+$b-background-color-hover: #002238;
+$b-border: 0;
+$b-border-hover: 0;
+$b-border-radius: 8px;
+$b-transition-duration: 0.3s;
+
+@mixin b-disabled {
+	opacity: 50%;
+}
+
+button,
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: $b-gap;
+	padding: $b-padding;
+	color: $b-color;
+	font-weight: $b-font-weight;
+	font-size: $b-font-size;
+	line-height: $b-line-height;
+	white-space: nowrap;
+	background-color: $b-background-color;
+	border: $b-border;
+	border-radius: $b-border-radius;
+	transition:
+    $bezier background-color $b-transition-duration,
+    $bezier color $b-transition-duration,
+    $bezier border-color $b-transition-duration;
+	user-select: none;
+
+	@media (max-width: $sm) {
+		padding: $b-padding-sm;
+		font-size: $b-font-size-sm;
+	}
+
+	&:not(:disabled) {
+		cursor: pointer;
+	}
+
+	@include hover {
+    &:not(:disabled) {
+      color: $cl-white;
+      background-color: $b-background-color-hover;
+			border: $b-border-hover;
+    }
+  }
+
+	&:active:not(:disabled) {
+		opacity: $click-opacity;
+	}
+
+	&:disabled {
+		@include b-disabled;
+	}
+}
+
+.btn-lg {
+	padding: $b-padding-lg;
+	font-size: $b-font-size-lg;
+	line-height: $b-line-height-lg;
+
+	@media (max-width: $sm) {
+		padding: $b-padding;
+		font-size: $b-font-size;
+		line-height: $b-line-height;
+	}
+}
+
+.btn-sm {
+	padding: $b-padding-sm;
+	font-size: $b-font-size-sm;
+}

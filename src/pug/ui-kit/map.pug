@@ -1,0 +1,10 @@
+mixin mapList 
+  each page in map 
+    li
+      a(href=`${page[0]}.html`)=`${page[1]} (${page[0]}.html)`
+
+section#map
+  .container
+    h2 Карта вёрстки 
+    ul 
+      +mapList

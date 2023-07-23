@@ -1,0 +1,201 @@
+section#tables
+  .container
+    h2 Таблицы
+    h3 Обычная таблица 
+    +common-table
+  .section-accent
+    .container
+      h3 Таблица ЛК
+      .account-card.account-card--table.mb-80
+        table.reset-table.account-table
+          thead.account-table__header 
+            tr.account-table__row 
+              th.account-table__th Дата и время
+              th.account-table__th IP 
+              th.account-table__th Тип
+              th.account-table__th Материал
+              th.account-table__th Событие
+              th
+          tbody.account-table__body
+            tr.account-table__row 
+              td.account-table__cell(data-title="Дата и время") 05.04.2023 23:22
+              td.account-table__cell(data-title="IP") 255.244.21.2
+              td.account-table__cell(data-title="Тип") Олег Петров
+              td.account-table__cell(data-title="Материал") Комментарии
+              td.account-table__cell.account-table__cell--last(data-title="Событие") Добавлен комментарий
+              td.account-table__controls
+                .btn-group
+                  button.btn-nav.btn-nav--sm Подробнее
+            tr.account-table__row 
+              td.account-table__cell(data-title="Дата и время") 05.04.2023 23:22
+              td.account-table__cell(data-title="IP") localhost
+              td.account-table__cell(data-title="Тип") Система
+              td.account-table__cell(data-title="Материал") Система
+              td.account-table__cell.account-table__cell--last(data-title="Событие") Создана резервная копия
+              td.account-table__controls
+                .btn-group
+                  button.btn-nav.btn-nav--sm Подробнее
+            tr.account-table__row 
+              td.account-table__cell(data-title="Дата и время") 05.04.2023 23:22
+              td.account-table__cell(data-title="IP") 198.244.01.15
+              td.account-table__cell(data-title="Тип") Владимир Рублев 
+              td.account-table__cell(data-title="Материал") Статьи
+              td.account-table__cell.account-table__cell--last(data-title="Событие") Изменение объекта
+              td.account-table__controls
+                .btn-group
+                  button.btn-nav.btn-nav--sm Подробнее
+            tr.account-table__row 
+              td.account-table__cell(data-title="Дата и время") 05.04.2023 23:22
+              td.account-table__cell(data-title="IP") 25.140.16.66
+              td.account-table__cell(data-title="Тип") Олеся Степанова
+              td.account-table__cell(data-title="Материал") Тесты
+              td.account-table__cell.account-table__cell--last(data-title="Событие") Изменение объекта
+              td.account-table__controls
+                .btn-group
+                  button.btn-nav.btn-nav--sm Подробнее
+            tr.account-table__row 
+              td.account-table__cell(data-title="Дата и время") 05.04.2023 23:22
+              td.account-table__cell(data-title="IP") 255.244.21.2
+              td.account-table__cell(data-title="Тип") Михаил
+              td.account-table__cell(data-title="Материал") Страницы
+              td.account-table__cell.account-table__cell--last(data-title="Событие") Удаление объекта
+              td.account-table__controls
+                .btn-group
+                  button.btn-nav.btn-nav--sm Подробнее
+      h3 Таблица ЛК - 2
+      .account-card.account-card--table
+        table.reset-table.account-table
+          thead.account-table__header 
+            tr.account-table__row 
+              th
+              th.account-table__th ID
+              th.account-table__th Пользователь
+              th.account-table__th Роль
+              th.account-table__th Авторизация
+              th
+          tbody.account-table__body
+            tr.account-table__row 
+              td.account-table__checkbox 
+                 label.checkbox 
+                  input(type="checkbox" name="name")
+                  span.checkbox__outer 
+                  svg.checkbox__icon(width='16' height='16' viewbox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2 8L6 12L14 4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              td.account-table__cell(data-title="ID") 1
+              td.account-table__cell(data-title="Пользователь")
+                .user-label
+                  .user-label__photo
+                    img(
+                      src="@img/users/petrov.jpg",
+                      srcset="@img/users/petrov@2x.jpg 2x",
+                      width="24",
+                      height="24",
+                      alt="Олег Петров")
+                  .user-label__name Олег Петров
+                  .user-label__status.user-label__status--success
+              td.account-table__cell(data-title="Роль") Пользователь
+              td.account-table__cell.account-table__cell--last(data-title="Авторизация") 18.04.23, 16:22
+              td.account-table__controls
+                .btn-group
+                  button.btn-nav.btn-nav--sm Блок
+                  button.btn-nav.btn-nav--sm Изменить
+            tr.account-table__row 
+              td.account-table__checkbox 
+                 label.checkbox 
+                  input(type="checkbox" name="name")
+                  span.checkbox__outer 
+                  svg.checkbox__icon(width='16' height='16' viewbox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2 8L6 12L14 4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              td.account-table__cell(data-title="ID") 1
+              td.account-table__cell(data-title="Пользователь")
+                .user-label
+                  .user-label__photo
+                    img(
+                      src="@img/users/petrov.jpg",
+                      srcset="@img/users/petrov@2x.jpg 2x",
+                      width="24",
+                      height="24",
+                      alt="Олег Петров")
+                  .user-label__name Олег Петров
+                  .user-label__status.user-label__status--success
+              td.account-table__cell(data-title="Роль") Пользователь
+              td.account-table__cell.account-table__cell--last(data-title="Авторизация") 18.04.23, 16:22
+              td.account-table__controls
+                .btn-group
+                  button.btn-nav.btn-nav--sm Блок
+                  button.btn-nav.btn-nav--sm Изменить
+            tr.account-table__row 
+              td.account-table__checkbox 
+                 label.checkbox 
+                  input(type="checkbox" name="name")
+                  span.checkbox__outer 
+                  svg.checkbox__icon(width='16' height='16' viewbox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2 8L6 12L14 4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              td.account-table__cell(data-title="ID") 1
+              td.account-table__cell(data-title="Пользователь")
+                .user-label
+                  .user-label__photo
+                    img(
+                      src="@img/users/petrov.jpg",
+                      srcset="@img/users/petrov@2x.jpg 2x",
+                      width="24",
+                      height="24",
+                      alt="Олег Петров")
+                  .user-label__name Олег Петров
+                  .user-label__status.user-label__status--success
+              td.account-table__cell(data-title="Роль") Пользователь
+              td.account-table__cell.account-table__cell--last(data-title="Авторизация") 18.04.23, 16:22
+              td.account-table__controls
+                .btn-group
+                  button.btn-nav.btn-nav--sm Блок
+                  button.btn-nav.btn-nav--sm Изменить
+            tr.account-table__row 
+              td.account-table__checkbox 
+                 label.checkbox 
+                  input(type="checkbox" name="name")
+                  span.checkbox__outer 
+                  svg.checkbox__icon(width='16' height='16' viewbox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2 8L6 12L14 4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              td.account-table__cell(data-title="ID") 1
+              td.account-table__cell(data-title="Пользователь")
+                .user-label
+                  .user-label__photo
+                    img(
+                      src="@img/users/petrov.jpg",
+                      srcset="@img/users/petrov@2x.jpg 2x",
+                      width="24",
+                      height="24",
+                      alt="Олег Петров")
+                  .user-label__name Олег Петров
+                  .user-label__status.user-label__status--success
+              td.account-table__cell(data-title="Роль") Пользователь
+              td.account-table__cell.account-table__cell--last(data-title="Авторизация") 18.04.23, 16:22
+              td.account-table__controls
+                .btn-group
+                  button.btn-nav.btn-nav--sm Блок
+                  button.btn-nav.btn-nav--sm Изменить
+            tr.account-table__row 
+              td.account-table__checkbox 
+                 label.checkbox 
+                  input(type="checkbox" name="name")
+                  span.checkbox__outer 
+                  svg.checkbox__icon(width='16' height='16' viewbox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2 8L6 12L14 4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              td.account-table__cell(data-title="ID") 1
+              td.account-table__cell(data-title="Пользователь")
+                .user-label
+                  .user-label__photo
+                    img(
+                      src="@img/users/petrov.jpg",
+                      srcset="@img/users/petrov@2x.jpg 2x",
+                      width="24",
+                      height="24",
+                      alt="Олег Петров")
+                  .user-label__name Олег Петров
+                  .user-label__status.user-label__status--success
+              td.account-table__cell(data-title="Роль") Пользователь
+              td.account-table__cell.account-table__cell--last(data-title="Авторизация") 18.04.23, 16:22
+              td.account-table__controls
+                .btn-group
+                  button.btn-nav.btn-nav--sm Блок
+                  button.btn-nav.btn-nav--sm Изменить

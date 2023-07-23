@@ -1,0 +1,113 @@
+$c-list-marker-color: $cl-primary;
+
+ul,
+ol {
+  @include reset-list;
+}
+
+ul:not(.reset-list),
+ol:not(.reset-list) {
+  margin: 0 0 7rem;
+  padding: 0;
+
+  li {
+    position: relative;
+    padding-left: 8rem;
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: $lg) {
+      padding-left: 6rem;
+    }
+
+    @media (max-width: $sm) {
+      padding-left: 4rem;
+    }
+  }
+
+  @media (max-width: $xl) {
+    margin-bottom: 4rem;
+  }
+
+  @media (max-width: $md) {
+    margin-bottom: 2rem;
+  }
+}
+
+ul:not(.reset-list) {
+  list-style: none;
+
+  li::before {
+    content: "";
+    position: absolute;
+    left: 4rem;
+    top: 0.65em;
+    width: 8px;
+    height: 8px;
+    background-color: $c-list-marker-color;
+    border-radius: 50%;
+
+    @media (max-width: $lg) {
+      left: 3rem;
+    }
+
+    @media (max-width: $sm) {
+      left: 2rem;
+      width: 6px;
+      height: 6px;
+    }
+  }
+
+  &.list-dash {
+    margin-bottom: 2rem;
+
+    li {
+      padding-left: 4rem;
+
+      @media (max-width: $sm) {
+        padding-left: 2rem;
+      }
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.75em;
+      width: 16px;
+      height: 2px;
+      background-color: $c-list-marker-color;
+      border-radius: 5px;
+  
+      @media (max-width: $sm) {
+        width: 12px;
+      }
+    }
+  }
+}
+
+ol:not(.reset-list) li {
+  counter-increment: num;
+
+  &::before {
+    content: counter(num);
+    position: absolute;
+    right: calc(100% - 6rem + 1rem);
+    top: 0;
+    color: inherit;
+    font-size: inherit;
+    font-weight: 400;
+    line-height: inherit;
+
+    @media (max-width: $lg) {
+      right: calc(100% - 3rem + 1rem);
+    }
+
+    @media (max-width: $sm) {
+      right: calc(100% - 2rem + 1rem);
+    }
+  }
+}

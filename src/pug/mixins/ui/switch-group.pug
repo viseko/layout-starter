@@ -1,0 +1,16 @@
+mixin switch-group(data)
+  -var name = data.name
+  -var id = data.id
+  -var list = data.list
+  -var checked = data.checked          
+  .btn-group
+    -var i = 0
+    each item of list 
+      input(
+        id=`${id}-${i}`
+        type="radio",
+        name=name,
+        value=item[0],
+        checked=(i === checked))
+      label.btn-nav(for=`${id}-${i}`)=item[1]
+      -i++

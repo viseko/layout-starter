@@ -1,0 +1,39 @@
+.card-slider {
+  @media (max-width: $lg) {
+    margin-left: -$container-padding-sm;
+    margin-right: -$container-padding-sm;
+
+    .swiper {
+      padding-left: $container-padding-sm;
+      padding-right: $container-padding-sm;
+    }
+  }
+
+  &__pagination {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    @media (max-width: $lg) {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: $sm) {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    &.swiper-pagination-lock {
+      display: none;
+    }
+  }
+  
+  .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+
+    @media (max-width: $lg) {
+      max-width: 343px;
+    }
+  }
+}

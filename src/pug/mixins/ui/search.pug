@@ -1,0 +1,14 @@
+mixin search(className) 
+  form.search.js-search(class=className)
+    .search__icon
+      +icon("search", 16, 16)
+    input.search__input(type="search", name="search" placeholder="Найти полезное" autocomplete="off" required)
+    button.search__reset(type="reset")
+      span.visually-hidden Очистить поле
+      +icon("close", 12, 12)
+
+mixin search-sm(data) 
+  form.search.search--sm.js-search
+    .search__icon
+      +icon("search", 16, 16)
+    input.search__input(type="search", name="search" placeholder=((data && data.placeholder) || "Поиск") autocomplete="off" required)

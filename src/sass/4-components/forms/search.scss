@@ -1,0 +1,88 @@
+.search {
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color: $cl-placeholder;
+    
+    svg {
+      display: block;
+    }
+
+    @media (max-width: $sm) {
+      top: 12px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 11px 55px 11px 39px;
+    font-size: 2rem;
+    line-height: 3rem;
+    background-color: $cl-primary-light;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    outline: 0;
+    transition: $bezier 0.3s background-color, $bezier 0.3s border-color;
+
+    @media (max-width: $sm) {
+      padding: 7px 15px 7px 39px;
+      font-size: 14px;
+    }
+
+    &::placeholder {
+      color: $cl-placeholder;
+    }
+
+    &:hover {
+      background-color: darken($cl-primary-light, 5%);
+    }
+
+    &:focus {
+      border-color: $cl-blue-dark;
+      background-color: $cl-white;
+    }
+  }
+
+  &__reset {
+    position: absolute;
+    top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 16px;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    background: none;
+    color: transparent;
+    pointer-events: none;
+    transition: color $bezier 0.3s;
+
+    @media (max-width: $sm) {
+      top: 8px;
+    }
+
+    &:hover:not(:disabled) {
+      color: $cl-blue-dark;
+      background: none;
+    }
+  }
+
+  &._has-value &__reset {
+    color: $cl-gray-dark;
+    pointer-events: all;
+  }
+
+  &--sm &__input {
+    padding: 7px 15px 7px 39px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  &--sm &__icon {
+    top: 12px;
+  }
+}

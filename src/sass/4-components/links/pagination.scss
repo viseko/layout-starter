@@ -1,0 +1,78 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 11px;
+  border: 1px solid $cl-stroke;
+  border-radius: $border-radius;
+  background-color: $cl-white;
+  user-select: none;
+
+  @media (max-width: $sm) {
+    padding: 0;
+  }
+
+  &__link {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding: 11px 12px;
+    color: $cl-blue-dark;
+    font-size: 2rem;
+    line-height: 3rem;
+
+    @media (max-width: $sm) {
+      padding: 7px 11px;
+      font-size: 14px;
+    }
+
+    &:hover,
+    &--active {
+      color: $cl-blue;
+
+      svg {
+        color: $cl-blue;
+      }
+    }
+
+    &--prev:hover svg {
+      transform: translateX(-8px);
+
+      @media (max-width: $sm) {
+        transform: translateX(-4px)
+      }
+    }
+
+    &--next:hover svg {
+      transform: translateX(8px);
+
+      @media (max-width: $sm) {
+        transform: translateX(4px)
+      }
+    }
+
+    svg {
+      position: relative;
+      width: 16px;
+      height: 16px;
+      color: $cl-black;
+      transition: $bezier color $tr-md, $bezier transform $tr-md;
+    }
+  }
+
+  &__link-text {
+    font-size: 14px;
+
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &--dark {
+    border-color: transparent;
+  }
+}

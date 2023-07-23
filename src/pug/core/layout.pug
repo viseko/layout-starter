@@ -1,0 +1,18 @@
+include vars
+include ../mixins/_blocks
+
+block vars
+
+doctype html
+html(lang="ru")
+  head
+    include head
+  body
+    .page
+      include header
+      main.page__main
+        block body
+      include footer
+      include modals
+    script(src="assets/js/main.min.js") 
+    block scripts

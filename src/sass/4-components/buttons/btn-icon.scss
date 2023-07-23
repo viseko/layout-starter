@@ -1,0 +1,30 @@
+.btn-icon {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	gap: 1rem;
+	color: $cl-black;
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 3rem;
+	background-color: transparent;
+	border: 0;
+
+  @include hover {
+    &:not(:disabled) {
+      color: $cl-blue;
+      background-color: transparent;
+    }
+  }
+
+	svg {
+		max-width: 3rem;
+		max-height: 3rem;
+
+		@media (max-width: $sm) {
+			max-width: 20px;
+			max-height: 20px;
+			font-size: 14px;
+		}
+	}
+}

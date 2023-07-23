@@ -1,0 +1,23 @@
+.page-section {
+  margin-bottom: $section-offset;
+
+  @media (max-width: $sm) {
+    margin-bottom: $section-offset-sm;
+  }
+
+  &--colored {
+    padding-top: $section-offset;
+
+    @media (max-width: $sm) {
+      padding-top: $section-offset-sm;
+    }
+  }
+
+  &--colored + &:not(.page-section--colored) {
+    margin-top: -$section-offset;
+
+    @media (max-width: $sm) {
+      margin-bottom: -$section-offset-sm;
+    }
+  }
+}

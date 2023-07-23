@@ -1,0 +1,51 @@
+// Цветовая палитра
+$cl-white: #ffffff;
+$cl-black: #000000;
+$cl-blue: #1168C8;
+
+// Семантическая палитра
+$cl-primary: #B6C9DE;
+$cl-error: #CD2318;
+$cl-success: #58B000;
+$cl-alert: #EDAA18;
+$cl-info: #4B6C92;
+
+// Базовые цвета
+$background: $cl-white; // фон страницы
+$color: $cl-black; // цвет текста
+$link-color: $cl-blue; // цвет ссылок
+$heading-color: $cl-black; // цвет заголовков
+
+// Контрольные точки
+$xs: 400px;
+$sm: 576px; // mobile
+$md: 768px; 
+$lg: 992px; // tablet
+$xl: 1200px; // desktop
+$xxl: 1400px;
+
+// Базовые размеры
+$rem: 8px; // единица модульной сетки
+$min-width: 320px; // мин. ширина контейнера
+$container-width: 1328px; // макс. шиирина контейнера
+$container-padding-sm: 2rem; // отступы контейнера на мобилке
+$container-padding: 8rem; // отступы контейнера на десктопе
+$section-offset: 96px; // межсекционные отступы
+$section-offset-sm: 40px; // межсекционные отступы (mobile)
+
+// Текст
+$font_family: "Roboto", Helvetica, Arial, sans-serif; // Шрифт по умолчанию
+$font-size: 20px; // кегль на десктопе
+$font-size-sm: 16px; // кегль на мобилках
+$line-height-sm: 3rem; // интерлиньяж на мобилках
+$line-height: 4rem; // интерлиньяж на десктопе
+$p-margin: 3rem; // отступы между абзацев
+
+// Эффекты
+$border-radius: 10px; // cтандартное скругление углов
+$click-opacity: 70%; // непрозрачность при клике
+
+// Анимации и переходы
+$tr-md: 0.3s; // станд. скорость перехода
+$tr-btn: 0.1s; // cкорость анимации для кнопок
+$bezier: cubic-bezier(0, 0, 0.4, 1); // станд. функция перехода

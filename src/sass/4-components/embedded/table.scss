@@ -1,0 +1,25 @@
+table:not(.reset-table) {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: auto;
+  font-size: 16px;
+  line-height: 3rem;
+  margin-bottom: 5rem;
+  border-top: 1px solid $cl-border;
+
+  tr {
+    border-bottom: 1px solid $cl-border;;
+  }
+  
+  td,
+  th {
+    padding: 15px 3rem;
+    text-align: left;
+  }
+
+  th {
+    color: $cl-white;
+    font-weight: 700;
+    background-color: $cl-primary;
+  }
+}
