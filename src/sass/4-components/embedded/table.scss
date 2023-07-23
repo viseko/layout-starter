@@ -1,25 +1,30 @@
+$c-cell-padding: 15px 3rem;
+$c-border-color: $cl-black;
+$c-th-background: $cl-primary;
+$c-th-color: $cl-white;
+
 table:not(.reset-table) {
   overflow: auto;
   width: 100%;
   margin-bottom: 5rem;
   border-collapse: collapse;
-  border-top: 1px solid $cl-border;
+  border-top: 1px solid $c-border-color;
   font-size: 16px;
   line-height: 3rem;
 
   tr {
-    border-bottom: 1px solid $cl-border;
+    border-bottom: 1px solid $c-border-color;
   }
   
   td,
   th {
-    padding: 15px 3rem;
+    padding: $c-cell-padding;
     text-align: left;
   }
 
   th {
-    background-color: $cl-primary;
-    color: $cl-white;
+    background-color: $c-th-background;
+    color: $c-th-color;
     font-weight: 700;
   }
 }
