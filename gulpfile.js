@@ -1,4 +1,5 @@
 import gulp from "gulp";
+import fs from "fs";
 
 import { path } from "./gulp/config/path.js";
 import { plugins } from "./gulp/config/plugins.js";
@@ -27,7 +28,7 @@ import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 import { zip } from "./gulp/tasks/zip.js";
-import { ftp } from "./gulp/tasks/ftp.js";
+import { ftp } from "./gbulp/tasks/ftp.js";
 
 
 // Наблюдатель
