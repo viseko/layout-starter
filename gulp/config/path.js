@@ -17,7 +17,6 @@ export const path = {
 	},
 	src: {
 		img: `${srcFolder}/assets/img/`,
-		svg: `${srcFolder}/img/**/*.svg`,
 		js: `${srcFolder}/js/main.js`,
 		jsUI: `${srcFolder}/js/ui.js`,
 		sass: [`${srcFolder}/sass/main.scss`, `${srcFolder}/sass/ui.scss`],

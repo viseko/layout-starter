@@ -1,4 +1,3 @@
-import webHtmlNosvg from "gulp-webp-html-nosvg";
 import pug from "gulp-pug";
 import versionNumber from "gulp-version-number";
 
@@ -15,7 +14,6 @@ export const pughtml = () => {
 		verbose: true // В терминале какой файл обработан
 	}))
 	.pipe(app.plugins.replace(/@img\//g, 'assets/img/'))
-	// .pipe(webHtmlNosvg())
 	.pipe(
 		versionNumber({
 			'value': '%DT%',

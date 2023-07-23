@@ -27,6 +27,7 @@ import { scss } from "./gulp/tasks/sass.js";
 import { server } from "./gulp/tasks/server.js";
 import { js } from "./gulp/tasks/js.js";
 import { tiny } from "./gulp/tasks/images.js";
+import { svgsprite } from "./gulp/tasks/icons.js";
 import { otfToTtf, ttfToWoff, clearFonts } from "./gulp/tasks/fonts.js";
 import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/ftp.js";
@@ -58,6 +59,7 @@ export { deploy }
 export { prepare }
 export { fonts }
 export { tiny }
+export {svgsprite}
 
 gulp.task("default", dev);
 
