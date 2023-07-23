@@ -1,27 +1,11 @@
-import webp from "gulp-webp";
-import imagemin from "gulp-imagemin";
+import tinyPNG from "gulp-tinypng-compress";
 
-export const images = () => {
-	return app.gulp.src(app.path.src.images)
-	.pipe(app.plugins.plumber(
-		app.plugins.notify.onError({
-			title: "IMAGES",
-			message: "Error: <%= error.message %>"
+export const tiny = () => {
+	return app.gulp.src(app.path.raw.img)
+		.pipe(tinyPNG({
+			key: 'df6HLdzR2ldKTqSyBX8L2GnBFnCkL45t',
+			sigFile: 'images/.tinypng-sigs',
+			log: true
 		}))
-	)
-	// .pipe(app.plugins.newer(app.path.build.images))
-	// .pipe(webp())
-	// .pipe(app.gulp.dest(app.path.build.images))
-	// .pipe(app.gulp.src(app.path.src.images))
-	.pipe(app.plugins.newer(app.path.build.images))
-	.pipe(imagemin({
-		progressive: true,
-		svgPlugins: [{ removeViewBox: false }],
-		interlaced: true,
-		optimizationLevel: 5 // 0 to 7
-	}))
-	.pipe(app.gulp.dest(app.path.build.images))
-	.pipe(app.gulp.src(app.path.src.svg))
-	.pipe(app.gulp.dest(app.path.build.images))
-	.pipe(app.plugins.browsersync.stream());
+		.pipe(app.gulp.dest(`${app.path.src.img}`));
 }
