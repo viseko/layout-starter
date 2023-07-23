@@ -5,7 +5,7 @@ mixin switch-group(data)
   -var checked = data.checked          
   .btn-group
     -var i = 0
-    each item of list 
+    each item in list
       input(
         id=`${id}-${i}`
         type="radio",
