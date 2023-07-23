@@ -27,7 +27,7 @@ import { scss } from "./gulp/tasks/sass.js";
 import { server } from "./gulp/tasks/server.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
-import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
+import { otfToTtf, ttfToWoff, clearFonts } from "./gulp/tasks/fonts.js";
 import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/ftp.js";
 
@@ -42,29 +42,22 @@ function watcher () {
 	gulp.watch(path.watch.js, js)
 }
 
-function watcher_online () {
-	gulp.watch(path.watch.images, images)
-	gulp.watch(path.watch.sass, gulp.series(scss, ftp))
-	// gulp.watch(path.watch.sass, ftp)
-	gulp.watch(path.watch.js, js)
-}
-
-// const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
-
 const mainTasks = gulp.series(reset, gulp.parallel(copy, pughtml, scss, js, images)); // для работы с Pug
 // const mainTasks = gulp.series(reset, gulp.parallel(copy, fonts, html, scss, js, images)); // для работы с HTML
 
 const dev = gulp.series(mainTasks, gulp.parallel(watcher, server));
-const online = gulp.series(mainTasks, gulp.parallel(watcher_online));
 const build = gulp.series(mainTasks);
-const deployZIP = gulp.series(mainTasks, zip);
+const pkzip = gulp.series(mainTasks, zip);
 const deploy = gulp.series(ftp);
+const fonts = gulp.series(otfToTtf, ttfToWoff, clearFonts);
+const prepare = gulp.parallel(fonts);
 
 export { dev }
-export { online }
 export { build }
-export { deployZIP }
+export { pkzip }
 export { deploy }
+export { prepare }
+export { fonts }
 
 gulp.task("default", dev);
 

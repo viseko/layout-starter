@@ -449,7 +449,7 @@
 }
 
 .air-datepicker-time--row input[type="range"]::-webkit-slider-thumb {
-  margin-top: calc(var(--adp-time-thumb-size)/2* - 1)
+  margin-top: calc(var(--adp-time-thumb-size)/ 2 * -1)
 }
 
 .air-datepicker-time--row input[type="range"]::-webkit-slider-runnable-track {

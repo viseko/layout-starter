@@ -27,7 +27,13 @@
 2. dev-сборка `npm run dev`
 3. production-сборка `npm run build`
 4. Деплой на FTP: `gulp deploy`
-5. Сборка в zip-архив `gulp zip`
+5. Сборка в zip-архив `gulp pkzip`
+6. Линтинг pug `gulp lint:template`
+7. Линтинг SCSS `gulp lint:scss`
+9. Конвертация шрифтов в woff/woff2 `gulp fonts`
+10. Оптимизация картинок `gulp tiny`
+11. Создание SVG-спрайта: `gulp svgsprite`
+12. Выполнить одновременно пп. 9-11: `gulp prepare`
 
 ## Файловая структура
 ```

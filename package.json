@@ -18,7 +18,7 @@
     "@babel/node": "^7.22.6",
     "@babel/preset-env": "^7.22.9",
     "browser-sync": "latest",
-    "del": "^6.0.0",
+    "del": "^7.0.0",
     "fs": "latest",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "latest",
