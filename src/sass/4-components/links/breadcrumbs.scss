@@ -14,12 +14,12 @@
 
     &:not(:last-child)::after {
       content: "/";
-      color: rgba($cl-gray-middle, 50%);
+      color: rgba($cl-blue, 50%);
     }
   }
 
   &__link {
-    color: $cl-gray-middle;
+    color: $cl-blue;
 
     &:hover {
       color: $cl-blue;
